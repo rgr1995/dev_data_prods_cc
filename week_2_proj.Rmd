@@ -1,0 +1,23 @@
+---
+title: "Week 2 Project"
+author: "Robert Ruiz"
+date: "8/21/2021"
+output: html_document
+---
+
+```{r}
+library(leaflet)
+```
+
+```{r}
+df=data.frame(lat=runif(10,38.88,38.9),lng=runif(10,-77.07,-77))
+my_map=df %>% 
+  leaflet() %>%
+  addTiles() %>%
+  addMarkers()
+```
+
+```{r}
+my_map
+```
+
